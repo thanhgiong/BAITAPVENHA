@@ -1,35 +1,63 @@
-# When done, submit this entire file to the autograder.
-
-# Part 1
-
+#Part1
 def sum arr
-  # YOUR CODE HERE
+  if arr.length == 0
+    return 0
+  else
+    arr.reduce(:+)
+  end
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.length == 0
+    return 0
+  else
+    sum(arr.sort.last(2))
+  end
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  return false if arr.empty? && n.zero? 
+  arr.combination(2).any? { |a, b| a + b == n }
 end
 
-# Part 2
-
+#Part2
 def hello(name)
-  # YOUR CODE HERE
+  "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  s.empty? ? false : (s =~ /^[ueoaiUEOAI#]/ ? false : true)
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+    return false unless s =~ /^[01]+$/
+    s.to_i(2) % 4 == 0
 end
 
-# Part 3
-
+#Part3
 class BookInStock
-# YOUR CODE HERE
+  def initialize(isbn, price)  
+      if isbn.empty?
+         raise(ArgumentError)
+      elsif price <= 0
+          raise(ArgumentError)
+      end
+      @isbn = isbn
+      @price = price
+  end
+  def isbn= isbn 
+    @isbn = isbn
+  end
+  def price= price
+    @price = price
+  end
+  def isbn
+    @isbn
+  end
+  def price
+    @price
+  end
+  def price_as_string
+    "$%.2f" % self.price
+  end 
 end
