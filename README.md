@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Ruby Intro
 =============
 
@@ -83,3 +84,7 @@ of 20 should format as "$20.00" and a price of 33.8 should format as
 # BaiTapVeNha
 Làm bài tập về nhà
 >>>>>>> f4052c83d635a7ee4b5bd86fd5fae9966e49c4c0
+=======
+# BAITAPVENHA123
+Nộp bài tập về nhà
+>>>>>>> 2645037b99a2967ca311c99736249ceab7c01ab7
